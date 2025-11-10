@@ -108,7 +108,7 @@ def train_model(model, criterion, optimizer, train_loader, val_loader, train_dat
 
 if __name__ == '__main__':
     # Carregar dados
-    dataset = EPIDataset(root_dir='Training', transform=data_transforms['train'])
+    dataset = EPIDataset(root_dir='new_dataset_glasses', transform=data_transforms['train'])
     
     # Dividir em treino e validação
     train_size = int(0.8 * len(dataset))
@@ -140,3 +140,6 @@ if __name__ == '__main__':
     # Salvar o modelo
     torch.save(model.state_dict(), 'epi_model.pth')
     print('Modelo treinado e salvo como epi_model.pth')
+
+    torch.save(model.state_dict(), 'epi_model_v2.pth')
+    print('Modelo V2 treinado e guardado como epi_model_v2.pth')
