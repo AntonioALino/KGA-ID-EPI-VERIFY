@@ -20,7 +20,7 @@ inference_transforms = transforms.Compose([
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
 
-classes_epi = ['without_glasses', 'glasses']
+classes_epi = ['sem_epi', 'com_epi']
 
 
 try:
